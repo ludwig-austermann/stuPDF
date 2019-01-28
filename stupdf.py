@@ -1,3 +1,7 @@
+# Ludwig Austermann
+# stuPDF
+# visit www.github.com/ludwig-austermann to view the project
+
 #personal fave: stupdf blanks <input file> -sep 1 -s <end index> -e <biblio> -t 160 -cwb
 # PyInstaller stupdf.py -F -n stuPDF
 import PyPDF2, argparse, random
