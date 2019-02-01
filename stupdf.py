@@ -209,7 +209,7 @@ def info(args):
 parser = argparse.ArgumentParser(description="A simple solution inserting blank pages into an existing pdf but also those standard features like splitting, merging, etc.", epilog="You can easily contribute to the project. More infos on version.")
 parser.add_argument("-cfo", "--countFromOne", help="enables natural counting", action="store_true")
 parser.add_argument("-pdf", "--autoAddPdf", help="automatically adds .pdf to files", action="store_const", const=".pdf", default="")
-parser.add_argument("-v", "--version", action="version", version="stupdf 0.3.0\nContribute to the project on github:\ngithub.com/austermann\n\nchangelog: added insert and blank function\ncode cleanup")
+parser.add_argument("-v", "--version", action="version", version="stupdf 0.3.1\nContribute to the project on github:\ngithub.com/austermann\n\nchangelog: added insert and blank function\ncode cleanup\nuse open stuPDF without terminal")
 subparsers = parser.add_subparsers()
 ###BLANKS###
 blanks_parser = subparsers.add_parser("blanks")
@@ -297,4 +297,6 @@ info_parser = subparsers.add_parser("info")
 info_parser.add_argument("input", help="input pdf")
 info_parser.set_defaults(func=info)
 args = parser.parse_args()
+if "func" not in args:
+    args = parser.parse_args(input("stuPDF: ").split())
 args.func(args)
