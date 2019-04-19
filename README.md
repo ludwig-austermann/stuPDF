@@ -1,3 +1,6 @@
+## Warning!
+currently some features are not working, esspecially blanks not :(, fix will come
+
 # stuPDF
 A commandline tool for PDF manipulation, with slicing and multiplying features*.
 
