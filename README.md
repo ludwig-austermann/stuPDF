@@ -1,6 +1,9 @@
 ## Warning!
 currently some features are not working, esspecially blanks not :(, fix will come
 
+## Big News
+I am currently rewriting the app in Rust.
+
 # stuPDF
 A commandline tool for PDF manipulation, with slicing and multiplying features*.
 
